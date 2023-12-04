@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid red;
+      border-collapse: collapse;
+    }
+  </style>
+  <body>
+    <p id="demo">Lorem, ipsum dolor.</p>
+    <button onclick="click">click me</button>
+    <input type="text" id="fName" />
+    <table>
+      <tr>
+        <th>name</th>
+        <th>number</th>
+      </tr>
+
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <ul id="task"></ul>
+    <!-- <p id="demo">Lorem <b>ipsum</b> dolor sit.</p>
+    <span class="sp1">text1</span>
+    <span class="sp1">text2</span>
+    <span class="sp1">text3</span>
+    <span class="sp1">text4</span>
+    <span class="sp1">text5</span>
+    <span class="sp1">text6</span>
+    <span class="sp2">text7</span> -->\
+
+    <script>
+      function click() {
+        let fName = document.getElementById("fName").value;
+        alert(`hello ${fName}`);
+      }
+      document.getElementById("demo").style.color = "darkblue";
+      document.getElementById("demo").style.backgroundColor = "lightblue";
+
+      let tasks = ["task1", "task2", "task3", "task4"];
+      // document.getElementById("task").innerHTML += `<li>${task[0]}</li>`;
+      // document.getElementById("task").innerHTML += `<li>${task[1]}</li>`;
+      // document.getElementById("task").innerHTML += `<li>${task[2]}</li>`;
+      for (let i = 0; i < tasks.length; i++) {
+        document.getElementById("task").innerHTML += `<li>${tasks[i]}</li>`;
+      }
+      // document.getElementById(
+      //   "task"
+      // ).innerHTML += `<li>task2</li><li>task2</li>`;
+      // document.getElementById(
+      //   "task"
+      // ).innerHTML += `<li>task2</li><li>task2</li>`;
+      // document.getElementById(
+      //   "task"
+      // ).innerHTML += `<li>task2</li><li>task2</li>`;
+      //************
+      let stds = ["ali", "reza", "maryam", "mmd"];
+      let tbody = document.getElementById("tbody");
+
+      for (let i = 0; i < stds.lengths; i++) {
+        tbody.innerHTML += `<tr><td>${i}</td><td>${stds[i]}</td></tr>`;
+      }
+
+      // tbody.innerHTML += `<tr><td>amir</td></tr>`;
+      // tbody.innerHTML = tbody.innerHTML + `<tr><td>ali</td></tr>`;
+      // tbody.innerHTML = tbody.innerHTML + `<tr><td>marym</td></tr>`;
+
+      let txt = document.getElementById("demo").innerText;
+      console.log(txt);
+
+      let txt1 = document.getElementById("demo").innerHTML;
+      console.log(txt1);
+      // let sum = function (num1, num2) {
+      //   console.log(num1 + num2);
+      // };
+      // sum(10, 9);
+
+      // let sum1 = (num1, num2) => {
+      //   return num1 + num2;
+      // };
+      // let result = sum1(5, 10);
+      // console.log(result);
+    </script>
+  </body>
+</html>
